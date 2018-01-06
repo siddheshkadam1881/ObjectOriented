@@ -7,7 +7,7 @@
  *  @description
  *
  *  @file           : anagramcheck.js
- *  @overview       : anagram checker module to check if number is prime or not.
+ *  @overview       : Determines whether a number input string is anagram or not.
  *  @author         : siddheshwar kadam
  *  @version        : 1.0
  *  @since          : 06-08-2017

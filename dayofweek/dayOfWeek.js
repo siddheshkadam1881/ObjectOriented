@@ -24,17 +24,17 @@
  ******************************************************************************/
      function gregoriancalendar()
        { 
-        var m = parseInt(document.getElementById("month").value);
-        var d = parseInt(document.getElementById("date").value);
-        var y = parseInt(document.getElementById("year").value);
-        var y0 =parseFloat(y - (14 - m) / 12);
+        var month = parseInt(document.getElementById("month").value);
+        var day = parseInt(document.getElementById("date").value);
+        var year = parseInt(document.getElementById("year").value);
+        var y0 =parseFloat(year - (14 - month) / 12);
         var x = parseFloat(y0 + y0/4 - y0/100 + y0/400);
-        var m0 =parseFloat(m + 12 * ((14 - m) / 12) - 2);
-        var d0 =parseFloat((d + x + (31*m0)/12) % 7);
+        var m0 =parseFloat(month + 12 * ((14 - month) / 12) - 2);
+        var d0 =parseFloat((day + x + (31 * m0)/12) % 7);
         switch(d0)
         {
             case 0:
-                document.write("Sunday");
+                document.write("sunday");
                 break;
             case 1:
                 document.write("Monday");
