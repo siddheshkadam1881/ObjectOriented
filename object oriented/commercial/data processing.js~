@@ -1,0 +1,41 @@
+function dataProcessing()
+{
+ var addressBookObjectArr = {};
+ var key = -1;
+ while(1)
+   {
+     var stockSymbol=prompt("enter stock symbol","");
+     var numShare=prompt("enter numShare","");
+     var dateTime=prompt("enter date of transaction"," ");
+     dataProcessingarr["stockSymbol"]= stockSymbol;
+     dataProcessingarr["numShare"]= numShare;
+     dataProcessingarr["dateTime"]= dateTime;
+     ++key;
+     localStorage.setItem(key, JSON.stringify(addressBookObjectArr));
+   }
+  if(numshare>0)
+  {
+    var userInput=prompt("what u want:(if u want to buy share enter 1 or sell enter 0)","");
+    if(userInput==0)
+    {
+     numShare--;
+     dataProcessingarr["numShare"]= numShare;
+    }
+    else
+    { 
+     numShare++;
+     dataProcessingarr["numShare"]= numShare; 
+    }
+
+  for(var i=0; i<=key; i++) {
+            if(localStorage.getItem(i) == null) continue;
+            document.write(localStorage.getItem(i));
+          }
+}
+}
+
+dataProcessing();
+
+  
+
+  

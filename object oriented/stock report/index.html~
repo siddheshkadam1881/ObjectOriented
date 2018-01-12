@@ -1,0 +1,8 @@
+<html>
+<head>
+<script type="text/javascript" src="stockReport.js"></script>
+</head>
+<body>
+<input type="button" onclick="addStock()" value="add stock">
+</body>
+</html>

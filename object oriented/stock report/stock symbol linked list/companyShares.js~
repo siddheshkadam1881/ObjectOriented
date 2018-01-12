@@ -1,0 +1,72 @@
+function companyShare()
+{
+  var Node = function(data) {
+  this.data = data;
+  this.next = null;
+};
+
+/***
+ * The list
+ */
+var SinglyLinkedList = function() {
+  this._length = 0;
+  this.head = null;
+};
+
+SinglyLinkedList.prototype.remove = function(index) {
+  var currentNode = this.head;
+  var length = this._length;
+  var count = 0;
+  var message = {failure: 'Failure: node not at position ' + index};
+  var beforeNodeToDelete = null;
+  var nodeToDelete = null;
+  var deltetedNode = null;
+  
+  // If the index is invalid
+  if (index < 0 || index >= length) {
+    throw new Error(message.failure);
+  }
+  
+  // If the first node is to be removed
+  if (index === 0) {
+    this.head = currentNode.next;
+    deletedNode = currentNode;
+    currentNode = null;
+    this._length--;
+    return deletedNode;
+  }
+  
+  // If any other node is deleted
+  while (count < index) {
+    beforeNodeToDelete = currentNode;
+    nodeToDelete = currentNode.next;
+    count++;
+  }
+  
+  beforeNodeToDelete.next = nodeToDelete.next;
+  deletedNode = nodeToDelete;
+  nodeToDelete = null;
+  this._length--;
+  return deletedNode;
+};
+
+ //assuming company shares here...
+  var sharesArr=[];
+  var companyShares =0; 
+ //share linklist created
+  var shares=new LinkedList();
+  var userInput=prompt("enter the value of share to be add "," ");
+  for(var i=0;i<userInput;i++)
+  {
+   shares.add(i+1);
+   companyShares++;
+  }
+   document.write(JSON.stringify(shares));
+   var userInput=prompt("enter the value of share to be remove "," ");
+   for(var i=0;i<userInput;i++)
+  {
+   shares.removeAtIndex();
+  }
+  document.write(JSON.stringify(shares));
+}
+companyShare()
